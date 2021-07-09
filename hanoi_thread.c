@@ -31,7 +31,6 @@ int main() {
     int n = 1;
     scanf("%d", &n);
     long arr[n];
-    int step = (n + NUM_THREADS - 1) / NUM_THREADS;
 
     pthread_t threads[NUM_THREADS];
     accumulate_arg_t args[NUM_THREADS];

@@ -1,23 +1,7 @@
 #include "sudoku.hpp"
 // header files
 
-#include <chrono>
-#include <iostream>
-
 using namespace std;
-
-struct Timer {
-    explicit Timer() { start = chrono::steady_clock::now(); }
-    ~Timer() {
-        auto end = chrono::steady_clock::now();
-        auto duration =
-            chrono::duration_cast<chrono::milliseconds>(end - start);
-        cout << "Total time: " << duration.count() << "ms" << endl;
-    }
-
-   private:
-    chrono::time_point<chrono::steady_clock> start;
-};
 
 static constexpr int size = 9;
 
